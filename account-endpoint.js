@@ -1,7 +1,1 @@
-function accountEndpoint(path) {
-  try {
-    const origin = new URL(globalThis.UA_ACCOUNT_API);
-    if (location.protocol !== 'https:' || origin.protocol !== 'https:' || origin.origin !== globalThis.UA_ACCOUNT_API) return null;
-    return new URL(path, origin);
-  } catch { return null; }
-}
+function accountEndpoint(o){try{const t=new URL(globalThis.UA_ACCOUNT_API);return"https:"!==location.protocol||"https:"!==t.protocol||t.origin!==globalThis.UA_ACCOUNT_API?null:new URL(o,t)}catch{return null}}
